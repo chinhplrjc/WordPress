@@ -222,7 +222,12 @@ textarea {
 	overflow: auto;
 	vertical-align: top;
 }
-
+pre > code {
+	 background-color: black;
+	 color: white ;
+	 margin-left: 0px;
+	padding: 10px;	
+}
 /* Reset non-text input types */
 input[type="checkbox"],
 input[type="radio"],
