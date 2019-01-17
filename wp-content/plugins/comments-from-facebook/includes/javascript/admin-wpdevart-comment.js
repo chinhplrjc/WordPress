@@ -1,6 +1,6 @@
 jQuery(document).ready(function(e) {
-    jQuery('.pro_select,.pro_input,.disabled_picker').click(function(){alert("If you want to use this feature upgrade to Facebook Comments Pro")});
-	  jQuery('.pro_checkbox').mousedown(function(){alert("If you want to use this feature upgrade to Facebook Comments Pro")})
+    // jQuery('.pro_select,.pro_input,.disabled_picker').click(function(){alert("If you want to use this feature upgrade to Facebook Comments Pro")});
+	//   jQuery('.pro_checkbox').mousedown(function(){alert("If you want to use this feature upgrade to Facebook Comments Pro")})
 });
 /*ADMIN CUSTOMIZE SETTINGS OPEN OR HIDE*/
 function get_array_of_opened_elements(){
