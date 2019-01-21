@@ -57,7 +57,7 @@
                         <a href="/">Home</a>
                     </li>
                     <li class="page_item page-item-2">
-                        <a href="forum">Forum</a>
+                        <a href="/forum">Forum</a>
                     </li>
                 </ul>
             </div>
