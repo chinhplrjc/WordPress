@@ -3,4 +3,4 @@
 
 index:
     path: /
-    defaults: { _controller: 'WebBundle\Controller\DefaultController::index' }
+    defaults: { _controller: 'WebBundle:Controller:DefaultController:index' }
