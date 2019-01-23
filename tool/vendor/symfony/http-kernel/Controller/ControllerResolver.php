@@ -64,7 +64,6 @@ class ControllerResolver implements ArgumentResolverInterface, ControllerResolve
 
             return false;
         }
-
         if (\is_array($controller)) {
             return $controller;
         }
@@ -76,7 +75,6 @@ class ControllerResolver implements ArgumentResolverInterface, ControllerResolve
 
             throw new \InvalidArgumentException(sprintf('Controller "%s" for URI "%s" is not callable.', \get_class($controller), $request->getPathInfo()));
         }
-
         if (false === strpos($controller, ':')) {
             if (method_exists($controller, '__invoke')) {
                 return $this->instantiateController($controller);
@@ -84,7 +82,6 @@ class ControllerResolver implements ArgumentResolverInterface, ControllerResolve
                 return $controller;
             }
         }
-
         $callable = $this->createController($controller);
 
         if (!\is_callable($callable)) {
@@ -173,9 +170,7 @@ class ControllerResolver implements ArgumentResolverInterface, ControllerResolve
         if (false === strpos($controller, '::')) {
             throw new \InvalidArgumentException(sprintf('Unable to find controller "%s".', $controller));
         }
-
         list($class, $method) = explode('::', $controller, 2);
-
         if (!class_exists($class)) {
             throw new \InvalidArgumentException(sprintf('Class "%s" does not exist.', $class));
         }

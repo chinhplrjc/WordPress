@@ -176,7 +176,6 @@ class Twig_Loader_Filesystem implements Twig_LoaderInterface, Twig_ExistsLoaderI
     protected function findTemplate($name, $throw = true)
     {
         $name = $this->normalizeName($name);
-
         if (isset($this->cache[$name])) {
             return $this->cache[$name];
         }
@@ -191,7 +190,6 @@ class Twig_Loader_Filesystem implements Twig_LoaderInterface, Twig_ExistsLoaderI
 
         try {
             $this->validateName($name);
-
             list($namespace, $shortname) = $this->parseName($name);
         } catch (Twig_Error_Loader $e) {
             if (!$throw) {
@@ -200,7 +198,6 @@ class Twig_Loader_Filesystem implements Twig_LoaderInterface, Twig_ExistsLoaderI
 
             throw $e;
         }
-
         if (!isset($this->paths[$namespace])) {
             $this->errorCache[$name] = sprintf('There are no registered paths for namespace "%s".', $namespace);
 
@@ -230,7 +227,6 @@ class Twig_Loader_Filesystem implements Twig_LoaderInterface, Twig_ExistsLoaderI
         if (!$throw) {
             return false;
         }
-
         throw new Twig_Error_Loader($this->errorCache[$name]);
     }
 
